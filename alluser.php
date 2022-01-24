@@ -52,11 +52,26 @@
                                 <td><?= $data['name'] ?></td>
                                 <td><?= $data['uname'] ?></td>
                                 <td><?= $data['email'] ?></td>
-                                <td><?php echo $data['status']==1 ?"Active" :"Deactive" ?></td>
+                                <td><?php echo $data['status']==1 ?"<span class='bg-success'>Active</span>" :"<span class='bg-danger'>Deactive</span>" ?></td>
                                 <td>
-                                    <a href="user.php?id=<?= $data['id']?>">View</a>
-                                    <a href="useredit.php?id=<?= $data['id']?>">Edit</a>
-                                    <a href="userdelete.php?id=<?= $data['id']?>">Delete</a>
+
+                                    <?php
+                                        if($data['status']==1){
+                                        ?>
+                                            <a href='statusupdate.php?id='".$data['id']."  class='bg-danger'>Deactive</a>
+
+                                        <?php
+                                        }else{
+                                        ?>
+                                            <a href='statusupdate.php?id='".$data['id']." class='bg-success'>Active</a>
+                                        <?php
+                                        }
+                                    ?>
+
+
+                                    <a href="user.php?id=<?= $data['id']?>" class='bg-danger'>View</a>
+                                    <a href="useredit.php?id=<?= $data['id']?>" class='bg-danger'>Edit</a>
+                                    <a href="userdelete.php?id=<?= $data['id']?>" class='bg-danger'>Delete</a>
                                 </td>
                             </tr>
                         <?php
