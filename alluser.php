@@ -39,6 +39,7 @@
                              <th>User name</th>
                              <th>Email</th>
                              <th>Action</th>
+                             <th>Status</th>
                          </tr>
 
                          <?php
@@ -51,6 +52,7 @@
                                 <td><?= $data['name'] ?></td>
                                 <td><?= $data['uname'] ?></td>
                                 <td><?= $data['email'] ?></td>
+                                <td><?php echo $data['status']==1 ?"Active" :"Deactive" ?></td>
                                 <td>
                                     <a href="user.php?id=<?= $data['id']?>">View</a>
                                     <a href="useredit.php?id=<?= $data['id']?>">Edit</a>
