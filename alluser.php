@@ -38,8 +38,8 @@
                              <th>Name</th>
                              <th>User name</th>
                              <th>Email</th>
-                             <th>Action</th>
                              <th>Status</th>
+                             <th>Action</th>
                          </tr>
 
                          <?php
@@ -52,27 +52,28 @@
                                 <td><?= $data['name'] ?></td>
                                 <td><?= $data['uname'] ?></td>
                                 <td><?= $data['email'] ?></td>
-                                <td><?php echo $data['status']==1 ?"<span class='bg-success'>Active</span>" :"<span class='bg-danger'>Deactive</span>" ?></td>
+                                <td><?php echo $data['status']==1 ?"<span class='btn btn-success'>Active</span>" :"<span class='btn btn-danger'>Deactive</span>" ?></td>
                                 <td>
 
                                     <?php
                                         if($data['status']==1){
                                         ?>
-                                            <a href='statusupdate.php?id='".$data['id']."  class='bg-danger'>Deactive</a>
-
+                                        
+                                            <a class="btn btn-danger" href="statusupdate.php?id=<?= $data['id']?>">Deactive </a>
+                                        
                                         <?php
                                         }else{
                                         ?>
-                                            <a href='statusupdate.php?id='".$data['id']." class='bg-success'>Active</a>
+                                            <a class="btn btn-success" href="statusupdate.php?id=<?= $data['id']?>">Active</a>
                                         <?php
                                         }
                                     ?>
 
 
-                                    <a href="user.php?id=<?= $data['id']?>" class='bg-danger'>View</a>
-                                    <a href="useredit.php?id=<?= $data['id']?>" class='bg-danger'>Edit</a>
-                                    <a href="userdelete.php?id=<?= $data['id']?>" class='bg-danger'>Delete</a>
-                                </td>
+                                    <a href="user.php?id=<?= $data['id']?>" class='btn btn-primary'>View</a>
+                                    <a href="useredit.php?id=<?= $data['id']?>" class='btn btn-primary'>Edit</a>
+                                    <a href="userdelete.php?id=<?= $data['id']?>" class='btn btn-primary'>Delete</a>
+                                </td>   
                             </tr>
                         <?php
                          }

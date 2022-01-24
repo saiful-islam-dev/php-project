@@ -5,7 +5,7 @@
 
     $id = $_GET['id'];
     
-    $query = "SELECT status FROM users WHERE id = $id";
+    $query = "SELECT status FROM users WHERE  id = $id";
 
     $result = mysqli_query($conn, $query);
     
