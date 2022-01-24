@@ -11,7 +11,7 @@ if(isset($_POST['submit'])){
     $password = $_POST['password'];
     $encpass = md5($password);
 
-    $query = "SELECT  name, uname, email, password FROM users WHERE email = '$email' AND password = '$encpass'"; 
+    $query = "SELECT id, name, uname, email, password FROM users WHERE email = '$email' AND password = '$encpass'"; 
     
 
     $result = mysqli_query($conn, $query);
