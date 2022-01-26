@@ -47,7 +47,7 @@
                          ?>
                             <tr>
                                 <td><?= ++$key ?></td>
-                                <td><img src="uploads/profile/<?= $data['photo'] ?>" width="80"
+                                <td><img class="image" src="uploads/profile/<?= $data['photo'] ?>"  width="80"
                                  alt="<?= $data['name'] ?>"></td>
                                 <td><?= $data['name'] ?></td>
                                 <td><?= $data['uname'] ?></td>

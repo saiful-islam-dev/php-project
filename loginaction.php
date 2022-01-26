@@ -1,6 +1,22 @@
 <?php
 session_start();
 //valedation of the form blank
+if(isset($_POST['submit'])){
+    
+    $email = trim(htmlentities($_POST["email"]));
+    $password = $_POST["password"];
+    
+    
+
+
+    if(empty($email)){
+       $_SESSION['emailError'] = $error['emailError'] = "Enter Your Email";
+    } 
+
+    if(empty($password)){
+       $_SESSION['passwordError'] = $error['passwordError'] = "Enter Your Password";
+    }
+}
 
 
 if(isset($_POST['submit'])){
