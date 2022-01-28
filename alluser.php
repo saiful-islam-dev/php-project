@@ -30,6 +30,9 @@
                     <h2>All User</h2>
                 </div>
                      <div class="card-body">
+                         <div>
+                         <a href="active.php" class='btn btn-primary'>Active</a>
+                         </div>
 
                      <table class="table table-bordered">
                          <tr class="table-dark">
@@ -47,7 +50,7 @@
                          ?>
                             <tr>
                                 <td><?= ++$key ?></td>
-                                <td><img class="image" src="uploads/profile/<?= $data['photo'] ?>"  width="80"
+                                <td><img class="image" src="uploads/profile/<?= $data['photo'] ?>"  width="100px 100px"
                                  alt="<?= $data['name'] ?>"></td>
                                 <td><?= $data['name'] ?></td>
                                 <td><?= $data['uname'] ?></td>
@@ -67,7 +70,7 @@
                                             <?php
                                         }
                                     ?>
-
+                        
                                 </td>
                                 <td>
                                     <a href="user.php?id=<?= $data['id']?>" class='btn btn-primary'>View</a>
